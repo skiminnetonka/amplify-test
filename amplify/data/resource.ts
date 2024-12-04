@@ -13,6 +13,14 @@ const schema = a.schema({
       usssnum: a.integer(),
     })
     .authorization((allow) => [allow.publicApiKey()]),
+    Event: a
+    .model({
+      title: a.string(), // Event title
+      description: a.string(), // Optional event description
+      startDate: a.date(), // Event start date
+      endDate: a.date(), // Optional event end date (if applicable)
+    })
+    .authorization((allow) => [allow.publicApiKey()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
