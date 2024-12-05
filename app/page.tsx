@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
+import type { Schema } from "../amplify/data/resource";
 import "./../app/app.css";
 import { Amplify } from "aws-amplify";
-import outputs from "@/amplify_outputs.json";
+import outputs from "/Users/dad/amplify_test/amplify_outputs.json";
 import "@aws-amplify/ui-react/styles.css";
 import { useRouter } from 'next/router'; // Import for routing
+import React from "react";
 
 Amplify.configure(outputs);
 
